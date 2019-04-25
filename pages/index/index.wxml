@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container" >
+  <view class="conBox" wx:for="{{newData}}">
+    <view class="picBox">
+      <image
+        style="width: 200rpx; height: 200rpx; background-color: #eeeeee;"
+        mode="{{item.mode}}"
+        src="{{item.pic}}"
+      ></image>
+    </view>
+    <view class="textBox">
+      <text class="title">{{item.title}}</text>
+      <text class="text">{{item.text}}</text>
+    </view>
+  </view>
+ 
+</view>
+

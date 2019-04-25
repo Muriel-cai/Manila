@@ -1,0 +1,53 @@
+
+.conBox{
+  width: 710rpx;
+  height: auto;
+  padding: 10px ;
+  margin: 0 auto;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.topTitle {
+  position: relative;
+  height: 32px;
+  width:100%;
+  border-bottom:1rpx solid #f0f0f0;
+ line-height: 32px;
+ font-size: 14px;
+ color:#666;
+}
+.sjrname{
+  float: right;
+  display: inline-block;
+  height:32px;
+  line-height:32px;
+}
+.textBox{
+  position: relative;
+  height:auto;
+  width:100%;
+  border-bottom:1rpx solid #f0f0f0;
+  padding: 10rpx 0;
+}
+.textBox view{
+  height: 22px;
+  font-size: 14px;
+  color:#666;
+  line-height: 22px;
+  color: #000;
+}
+.bottomtip{
+  position: relative;
+  height:32px;
+  width:100%;
+  line-height: 32px;
+  font-size: 14px;
+  color:#666;
+}
+.money{
+  float: right;
+  display: inline-block;
+  height:32px;
+  line-height:32px;
+  color: #000;
+}

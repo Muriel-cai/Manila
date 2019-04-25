@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userInfo">
+    <view class="picBox">
+      <image
+        style="width: 160rpx; height: 160rpx; background-color: #eeeeee;border-radius: 50%;"
+        src="{{userpic}}"
+      ></image>
+    </view>
+    
+    <view class="textInfo">
+      <view class="username">{{username}}</view>
+      <view class="phoneNum">{{phoneNum}}</view>
+    </view>
+  </view>
+
+ <view class="todayPrice">当天售价： <text class="price">{{todayPrice}}</text> 元</view> 
+ 
+ <view class="sellBox">
+    <view class="ewm sellItem" wx:if="{{type == 1}}" bindtap='showEwm'>
+     出售
+    </view>
+    <view class="ewm sellItem" wx:if="{{type == 2}}" >
+     收售
+    </view>
+    <view class="forsell sellItem" bindtap="tooreder">
+    订单
+    </view>
+    <view class="forsell sellItem" bindtap="scode">
+    扫一扫
+    </view>
+  </view>
+<van-dialog id="van-dialog" />
+<view wx:if="{{showewmPic}}" class="showewmPics">
+  <view class="opcit" bindtap="closeewm"> </view>
+  <view class="ewmBox">
+    <image class="qrcode-img" style='width:460rpx;height:460rpx;padding-top:20px;' src="{{ewmPic}}"></image>
+  </view>
+   <text class="tostText">请出示交易码给收货人</text>
+</view>
+  
+ 
+</view>

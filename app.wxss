@@ -1,0 +1,177 @@
+/**app.wxss**/
+@charset "UTF-8";
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+   
+} 
+page{
+  background:#F1F1F1;
+}
+
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;vertical-align:baseline;}
+img{border:0 none;vertical-align:top;}
+i,em{font-style:normal;}
+ol,ul{list-style:none;}
+input,select,button,h1,h2,h3,h4,h5,h6{font-size:100%;font-family:inherit;}
+table{border-collapse:collapse;border-spacing:0;}
+a { text-decoration: none;color:#666;}
+
+body {
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 540px;
+    font-size: 14px;
+    font-family: -apple-system,Helvetica,sans-serif,'Microsoft YaHei','helvetica neue',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro hei';
+    line-height: 1.5;
+    color: #666;
+    -webkit-user-select: none;
+            user-select: none;  
+    -webkit-text-size-adjust: 100%!important;
+    -webkit-touch-callout: none;  
+}
+
+/*点击阴影*/
+
+
+input[type=text],textarea {
+    -webkit-appearance: none;
+    appearance: none
+}
+template {
+    display: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
+  /* ie9以下 */
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #555756;
+  background: transparent;
+}
+
+a:hover{
+  cursor:pointer;
+  text-decoration: none;
+  outline: none;
+  border:none;
+}
+li {
+  list-style: none;
+}
+
+a img {
+  border: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+input {
+  outline: none;
+  border: 0;
+}
+
+input,
+textarea,
+button {
+  background-color: transparent;
+  font-family: 'Microsoft YaHei', 'Hiragino Sans GB', Helvetica, Arial, 'Lucida Grande', sans-serif;
+}
+
+input,
+button {
+  transition: all 0s !important;
+}
+
+
+/* 禁用iPhone中Safari的字号自动调整 */
+
+body,
+html {
+  -webkit-text-size-adjust: none;
+  font-family: 'Microsoft YaHei', 'Hiragino Sans GB', Helvetica, Arial, 'Lucida Grande', sans-serif;
+}
+
+body {
+  color: #333;
+  background: rgba(245,245,245,1);
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
+.mui-bar-tab~.mui-content {
+    padding-bottom: 1.2rem;
+}
+
+.clear:before,.clear:after {
+  display: table;
+  content: "";
+}
+.clear:after {
+  clear: both;
+}
+
+.over {
+  overflow: hidden;
+}
+html {
+  font-size: 20px;
+  font-size: 5.33333vw;
+}
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 17.06667px;
+  }
+}
+@media screen and (min-width: 540px) {
+  html {
+    font-size: 28.8px;
+  }
+}
+
+/*弹框*/
+.opacit{
+  display: none;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  background: #000;
+  opacity: 0.4;
+}

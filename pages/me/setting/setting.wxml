@@ -1,0 +1,19 @@
+<!--setting.wxml-->
+<view class="container" >
+
+    <view class="conBox" wx:for="{{orserData}}">
+    <view class="topTitle">
+      {{item.code}}
+      <text class="sjrname">收胶人：{{item.sgname}}</text>
+    </view>
+    <view class="textBox">
+      <view class="title">乳胶称量毛重：{{item.ratioR}} 公斤</view>
+      <view class="text">皮重    :{{item.ratioM}} 公斤</view>
+      <view class="title"> 干含比     :{{item.ratioG}}</view>
+    </view>
+    <view class="bottomtip">
+      {{item.time}}
+     <text class="money"> 交易金额 ：{{item.totalmoney}} 元 </text>
+    </view>
+    </view>
+</view>

@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "van-dialog": "../../dist/dialog/index",
+    "van-tabbar-item": "../../dist/tabbar-item/index",
+    "van-switch-cell": "../../dist/switch-cell/index",
+    "van-field": "../../dist/field/index",
+    "van-radio": "../../dist/radio/index",
+    "van-radio-group": "../../dist/radio-group/index",
+    "van-button": "../../dist/button/index",
+    "van-datetime-picker": "../../dist/datetime-picker/index",
+    "van-popup": "../../dist/popup/index"
+  }
+}

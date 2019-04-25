@@ -1,0 +1,49 @@
+<!--sjrorder.wxml-->
+<view class="container">
+    <view  class="main">
+     <view class="peopleinfo">
+        <view class="peoplename infotext">出售人： {{peoplename}}</view>
+        <view class="peopleplace infotext">地址：{{peopleplace}}</view>
+      </view>
+      <van-cell-group>
+          <van-field
+            value="{{ ratioR }}" 
+            clearable
+            label="乳胶毛重量"
+            placeholder="请输入"
+            use-button-slot         
+          >
+          <van-button slot="button" type="small ">公斤</van-button>
+          </van-field>
+          <van-field
+            value="{{ ratioM }}"
+            label="皮重"
+            placeholder="请输入" 
+            use-button-slot         
+          >
+          <van-button slot="button" size="small" type="">公斤</van-button>
+          </van-field>
+          <van-field
+            value="{{ ratioG }}"
+            label="干含比"
+            placeholder="请输入" 
+            use-button-slot         
+          >
+         
+          <van-button slot="button" size="small" type="">%</van-button>
+          </van-field>
+           <van-field
+            value="{{ totalmoney }}"
+            label="总金额"
+            placeholder="请输入" 
+            use-button-slot         
+          >        
+          <van-button slot="button" size="small" type="">元</van-button>
+          </van-field>
+      </van-cell-group>
+      <view>
+        <button class="subBtn" bindtap="combtn">确认</button>
+      </view>
+    </view>  
+
+</view>

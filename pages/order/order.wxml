@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<view class="container">
+    <!-- <demo-section>
+      <demo-block :title="$t('basicUsage')">
+      <van-button bindtap="setShow">按钮</van-button>
+      <van-popup v-model="show1" position="bottom">哈哈哈哈哈哈</van-popup>
+    </demo-block>
+    </demo-section>
+  -->
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <button type="default">单列选择器</button>
+            </picker>
+            <picker class="weui-btn" mode="time" value="{{time}}" start="09:01" end="21:01"   bindchange="bindTimeChange">
+                <button type="default">时间选择器</button>
+            </picker>
+           
+      
+
+
+ </view>
+
+
+
+
+
+
+
+
+
+ <!-- <view wx:if="{{checked == true}}">
+ 
+ 
+  需要协保员
+ </view>
+  <demo-block>
+ <van-popup       
+        v-model="popshow"
+        position="bottom"
+      >
+      55555555555555555555555
+      <view class="timeBox">
+        <van-datetime-picker
+           type="date"
+           value="{{ currentDate }}"
+           bind:input="onInput"
+           min-date="{{ minDate }}"
+           formatter="{{ formatter }}"
+         />
+      </view>
+        
+      </van-popup>
+      </demo-block>
+</view> -->

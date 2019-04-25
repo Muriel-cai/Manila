@@ -1,0 +1,177 @@
+.container {
+  width:710rpx;
+  height: auto;
+  margin: 0 auto;
+}
+.title{
+  display: block;
+  height: 60rpx;
+  line-height:60rpx;
+  margin-bottom:10rpx;
+  font-size: 36rpx;
+}
+.leftTitle{
+  width: 750rpx;
+  display: block; 
+  height: 40px;
+  line-height:40px;
+  font-size: 16px;
+  color:#333;
+  text-indent: 2px;
+  background: #F1F1F1;
+  padding-left: 40rpx;
+}
+.identitybox{
+  text-align: center;
+  margin: 10px 0;
+}
+.identityitem{
+  width: 270rpx;
+  height: 80rpx;
+  display:inline-block;
+  margin: 0 10px;
+  margin-bottom: 10rpx;
+  line-height: 80rpx;
+  border:2rpx solid #ccc; 
+  font-size: 30rpx;
+  background: #fff;
+}
+.type-none{
+  background: #1989FA;
+  color: #fff;
+}
+.hasxby{
+  width: 750rpx;
+  display: block;
+  padding: 5rxp 20rpx;
+}
+.isJN{
+  width: 750rpx;
+  display: block;
+  padding: 5rxp 20rpx; 
+}
+.w710{
+  width: 710rpx;
+  display: block;
+  margin:0 auto; 
+  padding: 40rpx;
+  background: #fff;
+}
+.subBtn{
+  height: 90rpx;
+  width:690rpx;
+  line-height:90rpx;
+  color:#fff;
+  background: #1989FA;
+  margin: 20rpx auto;
+  font-size:34rpx;
+}
+.zzsj {
+  position: relative;
+  z-index: 1;
+}
+.xbyBox{
+  position: relative;
+  z-index: 1;
+}
+.timebtn{
+  position: absolute;
+  z-index: 10;
+  top:0;
+  left: 100px;
+  opacity: 0;
+}
+.chobox{
+  position: absolute;
+  z-index: 10;
+  top:0;
+  left: 100px;
+  opacity: 0;
+}
+.hascho{
+  background: #1989FA;
+}
+.notc{
+   background: rgba(0,0,0,0.5);
+}
+.van-button--small{
+  font-size:14px;
+}
+
+.norradio{
+  text-indent: 10rpx;
+  height: 44px;
+}
+.lableText{
+  width:80px;
+  height: 44px;
+  line-height: 44px;
+  float: left;
+  font-size: 14px;
+  text-indent: 26rpx;
+  color: #333;
+  background: #F1F1F1;
+}
+ .labelRadio{
+  width:180px;
+  height: 44px;
+  float: right;
+  font-size: 14px;
+  line-height: 44px;
+  text-align: right;
+  padding-right: 10px;
+
+} 
+ .labelRadio radio{
+
+ }
+ .label-1,
+.label-2 {
+  width:60px;
+  padding-top: 10px;
+  float:right;
+  vertical-align: bottom;
+}
+.label-1__text,
+.label-2__text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.label-2__icon {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  background: #fcfff4;
+  border-radius: 50px;
+  border:1px solid #999; 
+}
+
+.label-2__icon-checked {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 12px;
+  height: 12px;
+  background: #1aad19;
+  border-radius: 50%;
+}
+
+.label-4_text {
+  text-align: center;
+  margin-top: 15px;
+}
+radio{
+  width:10px;
+  height:10px;
+
+} 
+.timeBox{
+  width: 710rpx;
+  height:auto;
+  margin:0 auto;
+}

@@ -1,0 +1,201 @@
+<!--index.wxml-->
+<view class="container">
+ <text class="title">请选择您的身份</text>
+ <view class="identitybox">
+    <view class="identityitem  {{roleType== item.type?'type-none':'type-block'}}" bindtap="haschoise" wx:for="{{identity}}" >
+      <text data-type ="{{item.type}}">{{item.text}}</text>
+    </view>
+ </view> 
+ <view class="hasxby" >
+  <van-switch-cell
+    title="是否需要协保员"
+    checked="{{ checked }}"
+    bind:change="onChange"
+
+  />
+ </view>
+ 
+ <view wx:if="{{checked == false}}">
+ <text class="leftTitle">基本信息填选</text>
+ <view  class="isJN">
+   <view class="w710">
+    <van-cell-group>
+      <van-field
+         value="{{ network }}"
+         required
+         label="网点编号"
+         placeholder="请输入"
+         bind:click-icon="onClickIcon"
+      />
+      <van-field
+        value="{{ username }}"
+        required
+        label="姓名"
+        placeholder="请输入"
+        bind:click-icon="onClickIcon"
+      />
+      
+      <van-field
+        v-model="{{ phonenum }}"
+        label="手机号码"
+        placeholder="请输入"
+        required
+      />
+      <van-field
+        value="{{ insurance }}"
+        label="保单号"
+        placeholder="请输入"
+        required
+      />
+      <van-field
+        value="{{ age }}"
+        label="年龄
+        placeholder="请输入"
+        required
+      />
+      <van-field
+        value="{{ place }}"
+        label="地址（村组）"
+        placeholder="请输入"
+        required
+        border="{{ false }}"
+      />
+    </van-cell-group>
+    </view>
+    
+    <view class="leftTitle">其它信息</view>
+    <view class="w710">
+    <van-cell-group>
+      <van-field
+        value="{{ bankplace }}"
+        required
+        clearable
+        label="开户行"
+        placeholder="请输入"
+        bind:click-icon="onClickIcon"
+      />
+    
+      <van-field
+        value="{{ banknum }}"
+        type="password"
+        label="银行账号"
+        placeholder="请输入"
+        required
+      />
+    </van-cell-group>
+    <view class="zzsj">
+      <van-cell-group>
+        <van-field
+          value="{{ zzTime }}"
+          label="种植时间"
+          placeholder="请输入"
+        />
+      </van-cell-group>
+      <view class="timebtn">
+      <picker class="weui-btn" mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01"              bindchange="bindDateChange">
+        <button type="default"class="choiceT">时间选择器</button>
+      </picker> 
+      </view>
+    </view>
+    <view wx:if="{{roleType == '1'}}" >
+      <!-- <van-radio-group value="{{ ifpoor }}" bind:change="ifpoorChange">
+        <van-radio name="1"> 是</van-radio>
+        <van-radio name="2"> 否</van-radio>
+      </van-radio-group> -->
+      <van-cell-group>
+        <van-field
+          value="{{ xjplace }}" 
+          clearable
+          label="橡胶种植地"
+          placeholder="请输入"
+          bind:click-icon="onClickIcon"
+        />
+          <van-field
+            value="{{ area }}"
+            label="种植面积"
+            placeholder="请输入" 
+            use-button-slot         
+          >
+          <van-button slot="button" type="small ">亩</van-button>
+          </van-field>
+          <van-field
+            value="{{ plantNum }}"
+            label="种植数量"
+            placeholder="请输入" 
+            use-button-slot         
+          >
+          <van-button slot="button" size="small" type="">株</van-button>
+          </van-field>
+          <van-field
+            value="{{ pluckNum }}"
+            label="开割数量"
+            placeholder="请输入" 
+            use-button-slot         
+          >
+         
+          <van-button slot="button" size="small" type="">株</van-button>
+          </van-field>
+      </van-cell-group>
+       </view>
+      <!-- <radio-group class="radio-group norradio" bindchange="standardRadioChange">
+          <text class="lableText">是否验收</text>
+          <view class="labelRadio">
+            <label class="radio" wx:for="{{standard}}" > 
+              <radio value="{{item.value}}" type="small" checked="{{item.checked}}"/>{{item.title}}
+            </label>
+          </view>
+      </radio-group> -->
+    </view>
+    <view>
+      <button class="combtn" bindtap="subInfo">提交审核</button>
+    </view>
+  <!-- <view class="section section_gap">
+    <text class="lableText">是否验收</text>
+    <radio-group class="group" bindchange="radioChange">
+      <view class="label-2" wx:for="{{standard}}">
+        <radio
+          id="{{item.value}}"
+         
+          value="{{item.value}}"
+          checked="{{item.checked}}"
+        ></radio>
+        <view class="label-2__icon">
+          <view
+            class="label-2__icon-checked"
+            style="opacity:{{item.checked ? 1: 0}}"
+          ></view>
+        </view>
+        <label class="label-2__text" for="{{item.value}}">
+          <text>{{item.title}}</text>
+        </label>
+      </view>
+    </radio-group>
+</view>  -->
+ </view>
+ 
+ </view>
+
+ <view wx:if="{{checked == true}}">
+    <view class="w710">
+     <view class="xbyBox">
+      <van-cell-group>
+        <van-field
+          value="{{ xbyname }}"
+          label="选择协保员"
+          placeholder="请输入"
+          required
+        />
+      </van-cell-group>
+      <view class="chobox">
+        <picker bindchange="bindPickerChange" value="" range="{{xbylist}}">
+          <button type="default">单列选择器</button>
+        </picker>
+      </view>
+    </view>    
+    </view>  
+    <view>
+      <button class="subBtn {{hasxby == true ?'hascho':'notc'}}" bindtap="fqxz">发起协助</button>
+    </view>
+ </view>
+</view>
+

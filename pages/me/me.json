@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-dialog": "../../dist/dialog/index",
+    "van-tabbar-item": "../../dist/tabbar-item/index"
+  }
+}
