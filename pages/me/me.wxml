@@ -1,9 +1,9 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userInfo">
+  <view class="userInfo" bindtap='tomyInfo'>
     <view class="picBox">
       <image
-        style="width: 160rpx; height: 160rpx; background-color: #eeeeee;border-radius: 50%;"
+        style="width: 120rpx; height: 120rpx; background-color: #eeeeee;border-radius: 50%;"
         src="{{userpic}}"
       ></image>
     </view>
@@ -13,30 +13,51 @@
       <view class="phoneNum">{{phoneNum}}</view>
     </view>
   </view>
-
- <view class="todayPrice">当天售价： <text class="price">{{todayPrice}}</text> 元</view> 
  
  <view class="sellBox">
-    <view class="ewm sellItem" wx:if="{{type == 1}}" bindtap='showEwm'>
-     出售
+   
+    <view class="ewm sellItem " bindtap="tomylp"  >
+      <image src="../../img/icon_rec.png"  
+          style="width: 160rpx; height: 160rpx; display:block;" />
+      <text>我的理赔</text>
     </view>
-    <view class="ewm sellItem" wx:if="{{type == 2}}" >
-     收售
+    <view class="ewm sellItem no-right " bindtap="tohelp">
+      <image src="../../img/help.png"  
+          style="width: 160rpx; height: 160rpx; display:block;" />
+      <text>协保员 </text>
+      <van-tag class="hasnum" type="primary" size="medium" round>2</van-tag>
+      <!-- <text class="hasnum">2</text> -->
     </view>
-    <view class="forsell sellItem" bindtap="tooreder">
-    订单
+     <view class="ewm sellItem" bindtap='showEwm'>
+      <image src="../../img/icon_qrc.png" 
+          style="width: 160rpx; height: 160rpx; display:block;" />
+      <text>收售</text>
     </view>
-    <view class="forsell sellItem" bindtap="scode">
-    扫一扫
+    <view 
+      class="forsell sellItem no-right" 
+      bindtap="scode" 
+      wx:if="{{isjn != 1}}"
+      >
+      <image src="../../img/icon_sca.png"  
+          style="width: 160rpx; height: 160rpx; display:block;" />
+      <text>扫一扫</text>
+    
+    </view>
+     <view class="ewm sellItem no-right" bindtap='togxt'>
+      <image src="../../img/icon_guanxi.png" 
+          style="width: 160rpx; height: 160rpx; display:block;" />
+      <text> 交易拓扑图 </text>
     </view>
   </view>
 <van-dialog id="van-dialog" />
 <view wx:if="{{showewmPic}}" class="showewmPics">
   <view class="opcit" bindtap="closeewm"> </view>
   <view class="ewmBox">
-    <image class="qrcode-img" style='width:460rpx;height:460rpx;padding-top:20px;' src="{{ewmPic}}"></image>
+    <text class="tostText">请出示交易码给收货人</text>
+    <image class="qrcode-img" style='width:460rpx;height:460rpx;padding-top:100rpx;' src="{{ewmPic}}"></image>    
+    <van-button type="info" wx:if="{{isjn == 2}}" bindtap='toseting' class="toseting">去选择订单</van-button>
   </view>
-   <text class="tostText">请出示交易码给收货人</text>
+  
 </view>
   
  

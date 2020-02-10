@@ -1,0 +1,47 @@
+<!--map.wxml-->
+<view class="container" >
+   <view class="page-section page-section-gap">
+    <map
+      id="myMap"
+      style="width: 100%; height: 300px;"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      markers="{{markers}}"
+      covers="{{covers}}"
+      show-location
+      bindmarkertap="markertap"
+      bindregionchange="regionchange"
+      bindcontroltap="controltap"
+       bindtap='bindMapTap'
+    >   
+    </map>
+  </view>
+  <view class="btn-area">
+    <button bindtap="includePoints" class="page-body-button" type="primary">显示附件收胶点/站</button>
+  </view>
+  <view wx:if="{{isshow}}" > 
+      <view class="priceBox">
+        <view class="yesdBox pricetext">
+          <text  class="price">
+            {{todayprice}} 
+          </text>
+          <text>
+            今日收购价
+          </text>
+        </view>
+        <view class="line"> </view>
+        <view class="todaydBox pricetext">
+          <text class="price">
+            {{yesPrice}} 
+          </text>
+          <text>
+            昨日收购价
+          </text>
+        </view>
+     </view> 
+     <view class="zdinfo" >网点名称 ：{{wdname}}</view>
+     <view class="zdinfo" >手机号 ：{{wdphone}}</view>
+     <view class="zdinfo" >地址 ：{{wdplace}}</view>
+  </view>
+</view>
+

@@ -1,12 +1,23 @@
 {
   "pages": [ 
     "pages/index/index",
+    "pages/me/logup/logup",
+    "pages/me/myInfo/myInfo",
+    "pages/setting/setting",   
     "pages/logs/logs",    
     "pages/me/me",
     "pages/order/order",
-    "pages/me/logup/logup",
+    "pages/index/map/map",
     "pages/me/sjrorder/sjrorder",
-    "pages/me/setting/setting"
+    "pages/me/mylp/mylp",
+    "pages/me/otherP/otherP",
+    "pages/me/mylp/lpInfo/lpInfo",
+    "pages/me/relevance/relevance",
+    "pages/me/confirmPrice/confirmPrice",
+   
+    "pages/setting/orderInfo/orderInfo",
+    "pages/setting/orderyy/orderyy"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -23,6 +34,12 @@
         "iconPath": "img/home.png",
         "selectedIconPath": "img/home_sel.png"
 
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "订单",
+        "iconPath": "img/list.png",
+        "selectedIconPath": "img/list_sel.png"
       },
       {
         "pagePath": "pages/me/me",

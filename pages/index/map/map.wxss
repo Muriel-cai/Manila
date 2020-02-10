@@ -1,0 +1,59 @@
+.page-section-gap{
+  box-sizing: border-box;
+  width:100%;
+
+  padding: 0 30rpx;
+}
+
+.page-body-button {
+  margin-bottom: 30rpx;
+  padding: 0 20rpx;
+}
+.xiaoer{
+  width:28rpx;
+  height: 28rpx;
+
+  width:28rpx;
+  height: 28rpx;
+}.priceBox{
+  position: relative;
+  z-index: 1;
+  width: 710rpx;
+  height: 60px;
+  background: #fff;
+  margin-bottom: 20rpx;
+  padding: 0px 0 10px;
+}
+.line{
+  position: absolute;
+  z-index: 2;
+  background: #D7D7D7;
+  width:1px;
+  height:30px;
+  top:20px;
+  left:354rpx;
+}
+.pricetext{
+  width:354rpx;
+  float:left;
+  text-align: center;
+}
+.pricetext text{
+  clear: both;
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  font-size:14px;
+  color: #666;
+}
+.price{
+  font-weight: 700;
+}
+.zdinfo{
+  height: 50rpx;
+  font-size: 32rpx;
+  color:#666;
+  line-height: 50rpx;
+  background: #fff;
+  padding-left:20rpx;
+}

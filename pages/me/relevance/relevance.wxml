@@ -1,0 +1,10 @@
+<!--relevance.wxml-->
+<view class="container" >
+  <view class="w710">
+    <image src="../../../img/jiaonong.jpg"  wx:if = "{{isjn == true}}"
+          style="width: 710rpx; height: 880rpx; display:block;" />
+    <image src="../../../img/shoujiao.jpg"  wx:if = "{{isjn == false}}"
+          style="width: 710rpx; height: 680rpx; display:block;" />
+  </view>
+</view>
+

@@ -1,0 +1,15 @@
+<!--myInfo.wxml-->
+<view class="container"> 
+
+  <view class="conBox" wx:for="{{otherData}}" bindtap='tohelpO'>
+    <view class="textBox">  
+      <view class="topT"> 协助单 {{item.num}}</view> 
+      <view> 身份 ： {{item.typep}}</view>
+      <view> 姓名 ：{{item.name}}</view>
+      <view> 手机号码 ： {{item.phone}}</view>
+      <view> 发起时间 ： {{item.time}}</view>
+
+    </view>
+  </view>
+</view>
+

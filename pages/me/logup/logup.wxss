@@ -44,6 +44,7 @@
   width: 750rpx;
   display: block;
   padding: 5rxp 20rpx;
+  margin-bottom: 1rpx ;
 }
 .isJN{
   width: 750rpx;
@@ -54,8 +55,21 @@
   width: 710rpx;
   display: block;
   margin:0 auto; 
-  padding: 40rpx;
+  padding: 20rpx 40rpx;
   background: #fff;
+}
+.subInfoBox{
+  width:750rpx;
+  text-align: center;
+}
+.combtn{
+  height: 90rpx;
+  width:690rpx;
+  line-height:90rpx;
+  color:#fff;
+  background: #1989FA;
+  margin: 20rpx auto;
+  font-size:34rpx;
 }
 .subBtn{
   height: 90rpx;
@@ -78,15 +92,23 @@
   position: absolute;
   z-index: 10;
   top:0;
-  left: 100px;
+  left: 96px;
   opacity: 0;
+}
+.timebtn button{
+  width:200px;
+
 }
 .chobox{
   position: absolute;
   z-index: 10;
   top:0;
-  left: 100px;
+  left: 96px;
   opacity: 0;
+}
+.chobox button{
+  width:200px;
+
 }
 .hascho{
   background: #1989FA;

@@ -1,0 +1,118 @@
+<!--myInfo.wxml-->
+<view class="container"> 
+  <view >
+    <text class="leftTitle">基本信息填选</text>
+    <view  class="isJN">
+      <view class="w710">
+        <van-cell-group>
+          <van-field
+             value="{{ identity }}"
+             label="身份"
+             readonly = "{{ischange}}"
+          />
+          <van-field
+             value="{{ wtype }}"
+             label="类别"
+             readonly = "{{ischange}}"
+          />
+          <van-field
+            value="{{ username }}"
+            label="姓名"
+            readonly = "{{ischange}}"
+          />
+          
+          <van-field
+            value="{{ phonenum }}"
+            label="手机号码"
+            readonly = "{{ischange}}"
+          />
+          <van-field
+            value="{{ insurance }}"
+            label="保单号"
+            readonly = "{{ischange}}"
+          />
+          
+          <van-field
+            value="{{ place }}"
+            label="地址（村组）"
+            readonly = "{{ischange}}"
+            border="{{ false }}"
+          />
+        </van-cell-group>        
+      </view>
+    </view> 
+    <view class="leftTitle">其它信息</view>  
+    <view class="w710">
+      <van-cell-group>
+        <van-field
+          value="{{ bankplace }}"
+          clearable
+          label="开户行"
+          readonly = "{{ischange}}"
+        />
+      
+        <van-field
+          value="{{ banknum }}"
+          label="银行账号"
+          readonly = "{{ischange}}"
+        />
+         <van-field
+          value="{{ iskn }}" 
+          clearable
+          label="是否困难户"
+          placeholder="请输入"
+          readonly = "{{ischange}}"
+        />
+         <van-field
+          value="{{ xjplace }}" 
+          clearable
+          label="橡胶种植地"
+          placeholder="请输入"
+          readonly = "{{ischange}}"
+        />
+         <van-field
+          value="{{ xjtime }}" 
+          clearable
+          label="植地年月"
+          placeholder="请输入"
+          readonly = "{{ischange}}"
+        />
+          <van-field
+            value="{{ area }}"
+            label="种植面积"
+            readonly ="{{ischange}}"
+            input-align = "right"     
+          >
+          <van-button slot="button" type="small ">亩</van-button>
+          </van-field>
+          <van-field
+            value="{{ plantNum }}"
+            label="种植数量"
+            readonly = "{{ischange}}"
+            input-align = "right"         
+          >
+          <van-button slot="button" size="small" type="">株</van-button>
+          </van-field>
+          <van-field
+            value="{{ pluckNum }}"
+            label="开割数量"
+            readonly ="{{ischange}}"
+            input-align = "right"
+          >
+         
+          <van-button slot="button" size="small" type="">株</van-button>
+          </van-field>
+      </van-cell-group>      
+    </view>
+    <view>
+      <button class="subBtn" bindtap="haschoise"  wx:if="{{ischange}}">申请修改</button>
+      <view class="bomview"  wx:if="{{ischange == false}}">
+       <van-button type="default" bindtap='cancle'>取消</van-button>
+       <van-button type="info" bindtap='cancle'>确定</van-button>
+      </view>
+     
+    </view>
+
+ </view>
+</view>
+

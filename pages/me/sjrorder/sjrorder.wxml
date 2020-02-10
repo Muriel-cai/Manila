@@ -11,7 +11,8 @@
             clearable
             label="乳胶毛重量"
             placeholder="请输入"
-            use-button-slot         
+            use-button-slot 
+            input-align = "right"        
           >
           <van-button slot="button" type="small ">公斤</van-button>
           </van-field>
@@ -19,26 +20,29 @@
             value="{{ ratioM }}"
             label="皮重"
             placeholder="请输入" 
-            use-button-slot         
+            use-button-slot   
+            input-align = "right"      
           >
           <van-button slot="button" size="small" type="">公斤</van-button>
           </van-field>
           <van-field
             value="{{ ratioG }}"
-            label="干含比"
+            label="干胶量"
             placeholder="请输入" 
-            use-button-slot         
+            use-button-slot  
+            input-align = "right"       
           >
          
-          <van-button slot="button" size="small" type="">%</van-button>
+          <van-button slot="button" size="small" type=""> 公斤 </van-button>
           </van-field>
            <van-field
             value="{{ totalmoney }}"
             label="总金额"
             placeholder="请输入" 
-            use-button-slot         
+            use-button-slot 
+            input-align = "right"        
           >        
-          <van-button slot="button" size="small" type="">元</van-button>
+          <van-button slot="button" size="small" type=""> 元 </van-button>
           </van-field>
       </van-cell-group>
       <view>

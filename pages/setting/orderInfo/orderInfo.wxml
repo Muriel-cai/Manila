@@ -1,0 +1,107 @@
+<!--orderInfo.wxml-->
+<view class="container" >
+    <view  class="main">
+        <view class="title">基本信息</view>
+        
+      <van-cell-group>
+          <van-field
+            value="{{ peoplename }}" 
+            clearable
+            label="出售人"
+            input-align = "right"
+            readonly ="{{ischange}}"     
+          >
+          </van-field>
+          <van-field
+            value="{{ sgpeople }}"
+            label="收购人"
+            input-align = "right"
+            readonly ="{{ischange}}"       
+          >
+          </van-field>
+          <van-field
+            value="{{ jynun }}"
+            label="交易号"
+            input-align = "right"
+            readonly ="{{ischange}}"          
+          >               
+          </van-field>
+          <van-field
+            value="{{ jytime }}"
+            label="交易时间"
+            input-align = "right"
+            readonly ="{{ischange}}"           
+          >               
+          </van-field>
+          <van-field
+            value="{{ jyplace }}"
+            label="交易地址"
+            input-align = "right"
+            readonly ="{{ischange}}"          
+          >               
+          </van-field>
+          <van-field
+            value="{{ validbd }}"
+            label="有效保单"
+            input-align = "right"
+            readonly ="{{ischange}}"          
+          >               
+          </van-field>
+           
+      </van-cell-group>
+      
+    </view> 
+    <view  class="main">
+        <view class="title">交易信息</view>
+        
+      <van-cell-group>
+           <van-field
+            value="{{ ratioR }}" 
+            label="乳胶毛重量"
+            use-button-slot  
+            input-align = "right"
+            readonly ="{{ischange}}"      
+          >
+          <van-button slot="button" type="small ">公斤</van-button>
+          </van-field>
+          <van-field
+            value="{{ ratioM }}"
+            label="皮重"
+            use-button-slot  
+            input-align = "right"
+            readonly ="{{ischange}}"        
+          >
+          <van-button slot="button" size="small" type="">公斤</van-button>
+          </van-field>
+          <van-field
+            value="{{ ratioG }}"
+            label="干胶量"
+            use-button-slot 
+            input-align = "right"
+            readonly ="{{ischange}}"          
+          >
+         
+          <van-button slot="button" size="small" type="">公斤</van-button>
+          </van-field>
+         <van-field
+            value="{{ totalmoney }}"
+            label="总金额"
+            use-button-slot 
+            input-align = "right"
+            readonly ="{{ischange}}"          
+          >        
+          <van-button slot="button" size="small" type="">元      </van-button>
+          </van-field>
+           
+      </van-cell-group>
+      
+    </view> 
+    <view style='width:100%;background:#fff;padding:20rpx;'> 
+      <image src="../../../img/img_flow.png" 
+          style="width: 420rpx; height: 420rpx; display:block;padding-left:60rpx;" />
+    </view>
+     <view>
+      <button class="subBtn" bindtap="toyy" >申请修改</button>
+          
+    </view>
+</view>

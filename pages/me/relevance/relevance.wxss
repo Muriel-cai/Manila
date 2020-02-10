@@ -1,0 +1,8 @@
+/**index.wxss**/
+ 
+.w710{
+  position: relative;
+  width:710rpx;
+  height: auto;
+  margin: 0 auto;
+}

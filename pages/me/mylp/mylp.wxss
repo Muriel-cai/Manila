@@ -1,0 +1,57 @@
+.textBox{
+  position: relative;
+  height:auto;
+  width:670rpx;
+  border-bottom:1rpx solid #f0f0f0;
+  padding: 30rpx 40rpx;
+  background: #fff;
+
+}
+.textBox view{
+  color:#666;
+  color: #000;
+  height: 60rpx;
+  font-size: 32rpx;
+  line-height:80rpx;
+}
+.blodT{
+ font-weight: 700;
+}
+.hasright{
+  display: inline-block;
+  width:50%;
+}
+.priceBox{
+  position: relative;
+  z-index: 1;
+  width: 710rpx;
+  height: 60px;
+  background: #fff;
+  margin-bottom: 20rpx;
+  padding: 0px 0 10px;
+}
+.line{
+  position: absolute;
+  z-index: 2;
+  background: #D7D7D7;
+  width:1px;
+  height:30px;
+  top:20px;
+  left:354rpx;
+}
+.pricetext{
+  width:354rpx;
+  float:left;
+  text-align: center;
+}
+.pricetext text{
+  clear: both;
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  font-size:14px;
+  color: #666;
+}
+.price{
+  font-weight: 700;
+}

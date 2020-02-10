@@ -6,25 +6,47 @@ import Dialog from '../../dist/dialog/dialog';
 Page({
   data: {
     userpic:'https://inews.gtimg.com/newsapp_ls/0/8693933918_580328/0',
-    username:"张三",
-    phoneNum:"123456789955",
-    todayPrice:"500",
+    username:"张成",
+    phoneNum:"18757235648",
     type:1,
     showewmPic:false,
-    ewmPic:''
+    ewmPic:'',
+    isjn: 2
   },
   // 
   onChange(e){
     console.log(e.detail,"55555555")
   },
-
+  tomyInfo:function(){
+    wx.navigateTo({
+      url: 'myInfo/myInfo'
+    }) 
+  },
+  tomylp:function(){
+    wx.navigateTo({
+      url: 'mylp/mylp'
+    }) 
+  },
+  togxt:function(){
+    wx.navigateTo({
+      url: 'relevance/relevance'
+    }) 
+  },
+  tohelp:function(){
+    wx.navigateTo({
+      url: 'otherP/otherP'
+    }) 
+  },
   //事件处理函数
   bindViewTap: function() {
     // wx.navigateTo({
     //   url: '../logs/logs'
     // })
   },
-  onLoad: function () {  
+  onLoad: function () {
+    wx.setNavigationBarTitle({ title: '个人中心' }); 
+    this.setData({ isjn: app.globalData.roletype });  
+    console.log(this.data.isjn, app.globalData.roletype,"-ppp")   
     Dialog.confirm({
        title: '提示',
        message: '您还未注册，请前往注册'
@@ -42,8 +64,7 @@ Page({
     });
   },
   showEwm:function(){
-    console.log(1166)
-   
+    console.log(1166)   
     this.drawImg();
   },
   drawImg: function () {
@@ -70,20 +91,36 @@ Page({
   closeewm:function(){
     this.setData({
       showewmPic: false
-    })
-  },
-  tooreder:function(e){
-   let self = this;
+    });
     wx.navigateTo({
-      url: 'setting/setting'
-    })
+      url: 'confirmPrice/confirmPrice'
+    }) 
+  },
+  toseting: function () {
+    console.log("0000");
+    wx.switchTab({
+      url: '../setting/setting'
+    });
+    this.setData({ showewmPic: false })
   },
   scode:function(){
     let self = this;
     console.log("扫一扫");
+    
     wx.scanCode({
       success: (res) => {
-        console.log(res)
+        console.log(res);
+        if (this.data.isjn == 3) {
+          wx.navigateTo({
+            url: 'confirmPrice/confirmPrice'
+          });
+
+        } else {
+          wx.navigateTo({
+            url: 'sjrorder/sjrorder'
+          })
+        }
+        
 //  var result = res.result;
 
         // self.setData({

@@ -1,0 +1,21 @@
+.textBox{
+  position: relative;
+  height:auto;
+  width:670rpx;
+  border-bottom:40rpx solid #f0f0f0;
+  padding: 30rpx 40rpx;
+  background: #fff;  
+}
+.textBox view{
+  color: #666;
+  font-size: 14px;
+  line-height: 56rpx;
+  text-indent: 10rpx;
+}
+.topT{
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  margin-bottom: 10rpx;
+  text-indent: 10rpx;
+}

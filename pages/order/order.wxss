@@ -1,149 +1,172 @@
-.container {
-  width:710rpx;
-  height: auto;
-  margin: 0 auto;
+page{
+  height: 100%;
 }
-.title{
-  display: block;
+.index_bt1{
+  width: 100rpx;
+  height: 100rpx;
+  padding-top:30rpx;
+  margin-left: 600rpx;
+}
+ 
+.xiaoer{
+  width: 100rpx;
+  height: 100rpx;
+}
+ 
+.index_shuaxin{
+  width: 60rpx;
   height: 60rpx;
-  line-height:60rpx;
-  margin-bottom:10rpx;
-  font-size: 36rpx;
+  padding-top: 860rpx;
+  margin-left: 20rpx;
 }
-.leftTitle{
-  width: 750rpx;
-  display: block; 
-  height: 40px;
-  line-height:40px;
-  font-size: 16px;
-  color:#333;
-  text-indent: 2px;
-  background: #F1F1F1;
-  padding-left: 40rpx;
+ 
+.shuaxin{
+  width: 60rpx;
+  height: 60rpx;
 }
-.identitybox{
-  text-align: center;
-  margin: 10px 0;
+ 
+.sch{
+  display: block;
+	z-index: 999999;
+  height: 69rpx;
+  width:100%; 
+  margin:0 auto;
+  padding-top: 30rpx;
 }
-.identityitem{
-  width: 270rpx;
-  height: 80rpx;
-  display:inline-block;
-  margin: 0 10px;
-  margin-bottom: 10rpx;
-  line-height: 80rpx;
-  border:2rpx solid #ccc; 
-  font-size: 30rpx;
-  background: #fff;
-}
-.type-none{
-  background: #1989FA;
+ 
+/*底部弹窗开始 -使屏幕变暗  */
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
   color: #fff;
 }
-.hasxby{
-  width: 750rpx;
-  display: block;
-  padding: 5rxp 20rpx;
-}
-.isJN{
-  width: 750rpx;
-  display: block;
-  padding: 5rxp 20rpx; 
-}
-.w710{
-  width: 710rpx;
-  display: block;
-  margin:0 auto; 
-  padding: 40rpx;
+/*对话框 */
+.commodity_attr_box {
+  height: 280rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
   background: #fff;
+  padding-top: 0rpx;
 }
-.subBtn{
-  height: 90rpx;
-  width:690rpx;
-  line-height:90rpx;
-  color:#fff;
-  background: #1989FA;
-  margin: 20rpx auto;
-  font-size:34rpx;
+ 
+.placeBox{
+  width: 100%;
+  height: 150rpx;
 }
-.van-button--small{
-  font-size:14px;
-}
-
-.norradio{
-  text-indent: 10rpx;
-  height: 44px;
-}
-.lableText{
-  width:80px;
-  height: 44px;
-  line-height: 44px;
-  float: left;
-  font-size: 14px;
-  text-indent: 26rpx;
-  color: #333;
-  background: #F1F1F1;
-}
- .labelRadio{
-  width:180px;
-  height: 44px;
-  float: right;
-  font-size: 14px;
-  line-height: 44px;
-  text-align: right;
-  padding-right: 10px;
-
-} 
- .labelRadio radio{
-
- }
- .label-1,
-.label-2 {
-  width:60px;
-  padding-top: 10px;
-  float:right;
-  vertical-align: bottom;
-}
-.label-1__text,
-.label-2__text {
+ 
+.placeViewLt{
   display: inline-block;
+  width: 620rpx;
+  height: 140rpx;
+ 
   vertical-align: middle;
 }
-
-
-.label-2__icon {
-  position: relative;
+ 
+.viewTitle{
+  display: block;
+  font-size: 38rpx;
+  color: #3F51B5;
+  margin-left: 20rpx;
+  padding-top: 34rpx;
+}
+ 
+.viewDis{
   display: inline-block;
+  font-size: 26rpx;
+  color: gray;
+  margin-left: 20rpx;
+}
+ 
+.viewAddr{
+  display: inline-block;
+  font-size: 28rpx;
+  color: gray;
+  margin-left: 20rpx;
+}
+ 
+.placeViewRt{
+  display: inline-block;
+  width: 120rpx;
+  height: 120rpx;
+  padding-top: 6rpx;
   vertical-align: middle;
-  margin-right: 10px;
-  width: 18px;
-  height: 18px;
-  background: #fcfff4;
-  border-radius: 50px;
-  border:1px solid #999; 
 }
-
-.label-2__icon-checked {
-  position: absolute;
-  left: 3px;
-  top: 3px;
-  width: 12px;
-  height: 12px;
-  background: #1aad19;
-  border-radius: 50%;
+ 
+.viewIcon{
+  display: block;
+  height: 100rpx;
+  width: 100%;
+  border-top: 1px solid #ebebeb;
+  padding-top: 40rpx;
 }
-
-.label-4_text {
+ 
+.indexIcon{
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 40rpx;
+  vertical-align: middle;
+}
+ 
+.timeText{
+  display: inline-block;
+  line-height: 45rpx;
+  margin-left: 12rpx;
   text-align: center;
-  margin-top: 15px;
+  width: 200rpx;
+  height: 45rpx;
+  background-color: rgb(230, 234, 255);
+  border-radius: 10px;
+  color: #3F51B5;
+  font-size: 24rpx;
 }
-radio{
-  width:10px;
-  height:10px;
-
-} 
-.timeBox{
-  width: 710rpx;
-  height:auto;
-  margin:0 auto;
+ 
+.indexIcon1{
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 110rpx;
+  vertical-align: middle;
 }
+ 
+.indexIcon2{
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 20rpx;
+  vertical-align: middle;
+}
+ 
+.timeText1{
+  display: inline-block;
+  line-height: 45rpx;
+  margin-left: 12rpx;
+  width: 100rpx;
+  height: 45rpx;
+  color: #3F51B5;
+  font-size: 24rpx;
+}
+ 
+.timeText2{
+  display: inline-block;
+  line-height: 45rpx;
+  margin-left: 12rpx;
+  width: 200rpx;
+  height: 45rpx;
+  color: #3F51B5;
+  font-size: 24rpx;
+}
+.btn-area{ width: 100%;}
+.btn_no{ float:left;width: 40%; margin-left: 5%;border: 0px;}
+.btn_ok{ float:left;width: 40%; margin-left: 10%;margin-right: 5%; border: 0px;}

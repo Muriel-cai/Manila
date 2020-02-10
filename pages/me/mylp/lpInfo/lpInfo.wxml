@@ -1,0 +1,108 @@
+<!--myInfo.wxml-->
+<view class="container"> 
+  <view >
+    <text class="leftTitle">赔付信息</text>
+    <view  class="isJN">
+      <view class="w710">
+        <van-cell-group>
+           <van-field
+             value="{{ lptime }}"
+             label="理赔时间"
+             readonly
+          />
+          <van-field
+             value="{{ lpmoney }}"
+             label="赔付金额"
+             readonly
+          />
+        </van-cell-group>
+      </view>
+    </view>
+    <text class="leftTitle">基本信息填选</text>
+    <view  class="isJN">
+      <view class="w710">
+        <van-cell-group>
+         
+          <van-field
+            value="{{ username }}"
+            label="出售人"
+            readonly
+          />
+          <van-field
+            value="{{ sjname }}"
+            label="收售人"
+            readonly
+          />
+          <van-field
+            value="{{ jynum }}"
+            label="交易号"
+            readonly
+          />
+          <van-field
+            value="{{ jyTime }}"
+            label="交易时间"
+            readonly
+          />
+          <van-field
+            value="{{ insurance }}"
+            label="有效保单"
+            readonly
+          />
+          
+          <van-field
+            value="{{ place }}"
+            label="交易地址"
+            readonly
+            border="{{ false }}"
+          />
+        </van-cell-group>        
+      </view>
+    </view> 
+    <view class="leftTitle">交易信息</view>  
+    <view class="w710">
+      <van-cell-group>
+         <van-field
+            value="{{ ratioR }}" 
+            clearable
+            label="乳胶毛重量"
+            use-button-slot  
+            input-align = "right"
+            readonly       
+          >
+          <van-button slot="button" type="small ">公斤</van-button>
+          </van-field>
+          <van-field
+            value="{{ ratioM }}"
+            label="皮重"
+            use-button-slot  
+            input-align = "right"
+            readonly          
+          >
+          <van-button slot="button" size="small" type="">公斤</van-button>
+          </van-field>
+          <van-field
+            value="{{ ratioG }}"
+            label="干胶量"
+            use-button-slot 
+            input-align = "right"
+            readonly           
+          >
+         
+          <van-button slot="button" size="small" type="">公斤</van-button>
+          </van-field>
+           <van-field
+            value="{{ totalmoney }}"
+            label="总金额"
+            use-button-slot 
+            input-align = "right"
+            readonly           
+          >        
+          <van-button slot="button" size="small" type="">元</van-button>
+          </van-field>
+      </van-cell-group>      
+    </view>
+
+
+ </view>
+</view>
+

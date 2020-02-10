@@ -15,7 +15,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.6",
-	"appid": "wx818002923f56a08d",
+	"appid": "wx0311c864dc8a8022",
 	"projectname": "newWX",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -41,7 +41,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 14,
 			"list": [
 				{
 					"id": 0,
@@ -51,16 +51,16 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "logup",
+					"id": 1,
+					"name": "order",
 					"pathName": "pages/order/order",
 					"query": "",
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 2,
 					"name": "logup",
-					"pathName": "pages/order/order",
+					"pathName": "pages/me/logup/logup",
 					"query": "",
 					"scene": null
 				},
@@ -72,16 +72,80 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "me",
+					"id": 4,
+					"name": "sjrorder",
 					"pathName": "pages/me/sjrorder/sjrorder",
 					"query": "",
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 5,
 					"name": "setting",
-					"pathName": "pages/me/setting/setting",
+					"pathName": "pages/setting/setting",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "confirmPrice",
+					"pathName": "pages/me/confirmPrice/confirmPrice",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orderInfo",
+					"pathName": "pages/setting/orderInfo/orderInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "myInfo",
+					"pathName": "pages/me/myInfo/myInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "mylp",
+					"pathName": "pages/me/mylp/mylp",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "lpInfo",
+					"pathName": "pages/me/mylp/lpInfo/lpInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "otherP",
+					"pathName": "pages/me/otherP/otherP",
+					"query": "type=1&name=王军$phone=13774256548",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "map",
+					"pathName": "pages/index/map/map",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orderyy",
+					"pathName": "pages/setting/orderyy/orderyy",
+					"query": "type=1&name=王军$phone=13774256548",
 					"scene": null
 				}
 			]

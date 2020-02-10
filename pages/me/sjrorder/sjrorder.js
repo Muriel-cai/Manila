@@ -3,18 +3,19 @@
 const app = getApp()
 Page({
   data: {
-    peoplename:"张三",
-    peopleplace:"海南省厦门市同安村"
+    peoplename:"张成",
+    peopleplace:"海南省海口市同安村"
   },
-  onload:function(){
-
-  },
+  
   combtn:function(e){
     let self = this;
     console.log(16666)
     wx.switchTab({
       url: '../me'
     })
-  }
+  },
+  onload: function () {
+    wx.setNavigationBarTitle({ title: '海胶信息' });
+  },
  
 });

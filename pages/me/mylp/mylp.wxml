@@ -1,0 +1,34 @@
+<!--myInfo.wxml-->
+<view class="container"> 
+  
+ <view class="priceBox">
+  <view class="yesdBox pricetext">
+    <text  class="price">
+      {{yesdPrice}} 
+    </text>
+    <text>
+      今日赔付
+    </text>
+  </view>
+  <view class="line"> </view>
+  <view class="todaydBox pricetext">
+    <text class="price">
+      {{totalPrice}} 
+    </text>
+    <text>
+      历史赔付
+    </text>
+  </view>
+ </view> 
+
+  <view class="conBox" wx:for="{{sellData}}" bindtap='toInfo'>
+    <view class="textBox">
+      <view class=""> <text class="blodT">交易号：</text> {{item.jynum}}</view>
+      <view >
+      <text class="hasright">时间：{{item.time}}</text>
+      <text class="hasright">赔付：{{item.pfmoney}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+

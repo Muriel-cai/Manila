@@ -1,42 +1,60 @@
 <!--index.wxml-->
 <view class="container">
- <text class="title">请选择您的身份</text>
- <view class="identitybox">
-    <view class="identityitem  {{roleType== item.type?'type-none':'type-block'}}" bindtap="haschoise" wx:for="{{identity}}" >
-      <text data-type ="{{item.type}}">{{item.text}}</text>
+  <view wx:if="{{hasinfo == 2}}">
+    <text class="leftTitle" >请选择您的身份</text>
+    <view class="identitybox">
+      <view class="identityitem  {{ item.static ? 'type-none':'type-block'}}" id ="{{item.typeid}}" wx:for-index="index" data-index="{{index}}" bindtap="haschoise" wx:for="{{identity}}" >
+      <text >{{item.text}}</text>
     </view>
- </view> 
- <view class="hasxby" >
-  <van-switch-cell
-    title="是否需要协保员"
-    checked="{{ checked }}"
-    bind:change="onChange"
-
-  />
- </view>
- 
+    </view> 
+    <view class="hasxby" >
+     <van-switch-cell
+       title="是否需要协保员"
+       checked="{{ checked }}"
+       bind:change="onChange"
+      
+     />
+    </view>
+  </view>
  <view wx:if="{{checked == false}}">
- <text class="leftTitle">基本信息填选</text>
+ <text class="leftTitle">基本信息</text>
  <view  class="isJN">
    <view class="w710">
     <van-cell-group>
-      <van-field
-         value="{{ network }}"
-         required
-         label="网点编号"
-         placeholder="请输入"
-         bind:click-icon="onClickIcon"
-      />
+    
       <van-field
         value="{{ username }}"
         required
         label="姓名"
         placeholder="请输入"
         bind:click-icon="onClickIcon"
+        wx:if="{{roleType }}"
+      />
+      <van-field
+        value="{{ age }}"
+        label="名称"
+        required
+        placeholder="请输入"
+        wx:if="{{fjn == 'fjn' }}"
       />
       
       <van-field
         v-model="{{ phonenum }}"
+        label="证件号 / 组织机构代码 "
+        placeholder="请输入"
+        wx:if="{{fjn == 'fjn' }}"
+        required
+      />
+      <van-field
+        value="{{ username }}"
+        required
+        label="联系人"
+        placeholder="请输入"
+        bind:click-icon="onClickIcon"
+        wx:if="{{fjn == 'fjn' }}"
+      />    
+      <van-field
+        value="{{ phonenum }}"
         label="手机号码"
         placeholder="请输入"
         required
@@ -47,12 +65,7 @@
         placeholder="请输入"
         required
       />
-      <van-field
-        value="{{ age }}"
-        label="年龄
-        placeholder="请输入"
-        required
-      />
+      
       <van-field
         value="{{ place }}"
         label="地址（村组）"
@@ -60,6 +73,7 @@
         required
         border="{{ false }}"
       />
+      
     </van-cell-group>
     </view>
     
@@ -77,18 +91,18 @@
     
       <van-field
         value="{{ banknum }}"
-        type="password"
+        required
+        clearable
         label="银行账号"
         placeholder="请输入"
-        required
       />
     </van-cell-group>
-    <view class="zzsj">
+    <!-- <view class="zzsj" wx:if="{{roleType == 't1'}}">
       <van-cell-group>
         <van-field
           value="{{ zzTime }}"
           label="种植时间"
-          placeholder="请输入"
+          placeholder="请选择"
         />
       </van-cell-group>
       <view class="timebtn">
@@ -96,47 +110,8 @@
         <button type="default"class="choiceT">时间选择器</button>
       </picker> 
       </view>
-    </view>
-    <view wx:if="{{roleType == '1'}}" >
-      <!-- <van-radio-group value="{{ ifpoor }}" bind:change="ifpoorChange">
-        <van-radio name="1"> 是</van-radio>
-        <van-radio name="2"> 否</van-radio>
-      </van-radio-group> -->
-      <van-cell-group>
-        <van-field
-          value="{{ xjplace }}" 
-          clearable
-          label="橡胶种植地"
-          placeholder="请输入"
-          bind:click-icon="onClickIcon"
-        />
-          <van-field
-            value="{{ area }}"
-            label="种植面积"
-            placeholder="请输入" 
-            use-button-slot         
-          >
-          <van-button slot="button" type="small ">亩</van-button>
-          </van-field>
-          <van-field
-            value="{{ plantNum }}"
-            label="种植数量"
-            placeholder="请输入" 
-            use-button-slot         
-          >
-          <van-button slot="button" size="small" type="">株</van-button>
-          </van-field>
-          <van-field
-            value="{{ pluckNum }}"
-            label="开割数量"
-            placeholder="请输入" 
-            use-button-slot         
-          >
-         
-          <van-button slot="button" size="small" type="">株</van-button>
-          </van-field>
-      </van-cell-group>
-       </view>
+    </view> -->
+   
       <!-- <radio-group class="radio-group norradio" bindchange="standardRadioChange">
           <text class="lableText">是否验收</text>
           <view class="labelRadio">
@@ -145,10 +120,11 @@
             </label>
           </view>
       </radio-group> -->
+       <button class="combtn" bindtap="subInfo">提交审核</button>
     </view>
-    <view>
-      <button class="combtn" bindtap="subInfo">提交审核</button>
-    </view>
+    <!-- <view class="subInfoBox">
+     
+    </view> -->
   <!-- <view class="section section_gap">
     <text class="lableText">是否验收</text>
     <radio-group class="group" bindchange="radioChange">
@@ -179,18 +155,32 @@
     <view class="w710">
      <view class="xbyBox">
       <van-cell-group>
-        <van-field
+        <!-- <van-field
           value="{{ xbyname }}"
           label="选择协保员"
           placeholder="请输入"
           required
-        />
+        /> -->
+        <van-field
+         value="{{ xzname }}"       
+         label="姓名"
+         placeholder="请输入"
+         bind:click-icon="onClickIcon"
+        
+      />
+       <van-field
+         value="{{ xzphone }}"        
+         label="电话"
+         placeholder="请输入"
+         bind:click-icon="onClickIcon"
+         border="{{ false }}"
+      />
       </van-cell-group>
-      <view class="chobox">
+      <!-- <view class="chobox">
         <picker bindchange="bindPickerChange" value="" range="{{xbylist}}">
           <button type="default">单列选择器</button>
         </picker>
-      </view>
+      </view> -->
     </view>    
     </view>  
     <view>

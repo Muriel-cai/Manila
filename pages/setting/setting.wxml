@@ -1,0 +1,95 @@
+<!--setting.wxml-->
+<view class="container" >
+  <view class="toptab" wx:if="{{isjn == 2}}">
+    <van-tabs active="{{ hastab }}" bind:change="ontab" color="#3FA2EE">     
+      <van-tab title="未出售"> </van-tab>
+      <van-tab title="已出售"></van-tab>
+    </van-tabs>
+  </view>
+  <view class="topvital" wx:if="{{isws}}">
+   共计 {{allsetting}}单 
+   <text class="setcho" bindtap='setcho'>{{setchoText}}</text>
+  </view>
+    <view class="conBox" wx:for="{{orserData}}" data-id="{{index}}"  bindtap='toorder'>
+      <view class="topTitle">
+        <view class='list_cons flex_start' wx:if="{{ifcs}}" >
+          <block wx-if="{{!item.checked}}">
+            <view class='icon_none'> </view>
+          </block>
+          <block wx-if="{{item.checked}}">
+            <icon type="success" size="20" color="#3FA2EE" />
+          </block>
+        </view>
+          {{item.code}}
+        <text class="sjrname">收胶人：{{item.sgname}}</text>
+      </view>     
+      <view class="textBox">
+        <view class="title">乳胶称量毛重：{{item.ratioR}} 公斤</view>
+        <view class="text">皮重    :{{item.ratioM}} 公斤</view>
+        <view class="title"> 干胶量     :{{item.ratioG}}公斤</view>
+      </view>
+      <view class="bottomtip">
+        {{item.time}}
+        <text class="money"> 交易金额 ：{{item.totalmoney}} 元 </text>
+      </view>
+    </view>
+    <view style= "height:100rpx;" wx:if="{{ifcs}}"> </view>
+    <van-dialog id="van-dialog" />
+      <view class='bottom flex_between' wx:if="{{ifcs}}">
+        <view class='left flex_start'>
+          <block wx:if="{{select_all}}">
+            <view bindtap='select_none' class='flex_start'>
+              <icon type="success" size="20" color="#3FA2EE" />
+              <view>
+                取消全选
+              </view>
+            </view>
+          </block>
+          <block wx:if="{{!select_all}}">
+            <view bindtap='select_all' class='flex_start'>
+              <view class='select_none'>
+              </view>
+              <view>
+                全选
+              </view>
+            </view>
+          </block>
+        </view>
+
+       <van-popup
+         show="{{ showinfo }}"
+         position="bottom"
+         overlay="{{ true }}"
+         bind:close="onClose"
+       >
+       <view class="totalInfo" bindtap='onClose'>
+        <view class="sethei tiptext">损耗约5%~10%</view>
+        <view class="sethei">乳胶称重毛量  <text>{{totalweight}} 公斤</text></view>
+        <view class="sethei">皮重 <text>{{totalmz}} 公斤</text></view>
+        <view class="sethei">干胶量<text>{{totalrjl}} 公斤</text></view>
+        </view>
+       </van-popup>
+        <view class='right flex_end'>
+          <view style='text-align:right'>
+            <view class='all'>
+             <view class="getInfo" bindtap='getInfo'>详情  
+             <van-icon name="arrow-up" info="{{middlearr.length}} " color="#000" /></view>              
+            </view>
+          </view>
+          <view bindtap='deleteitem' class='sure'>
+            确定
+          </view>
+        </view>
+      
+  </view>
+  <van-dialog id="van-dialog" />
+  <view wx:if="{{showewmPic}}" class="showewmPics">
+    <view class="opcit" bindtap="closeewm"> </view>
+    <view class="ewmBox">
+      <image class="qrcode-img" style='width:460rpx;height:460rpx;padding-top:20px;' src="{{ewmPic}}"></image>
+      <text class="tostText">请出示交易码给收货人</text>
+    </view>
+    
+  </view>
+  
+</view>

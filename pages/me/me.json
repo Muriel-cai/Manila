@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "van-dialog": "../../dist/dialog/index",
-    "van-tabbar-item": "../../dist/tabbar-item/index"
+    "van-tag": "../../dist/tag/index",
+    "van-button": "../../dist/button/index"
   }
 }
