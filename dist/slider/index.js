@@ -49,14 +49,13 @@ VantComponent({
             this.touchMove(event);
             this.getRect('.van-slider').then((rect) => {
                 const diff = this.deltaX / rect.width * 100;
-                this.newValue = this.startValue + diff;
-                this.updateValue(this.newValue, false, true);
+                this.updateValue(this.startValue + diff, false, true);
             });
         },
         onTouchEnd() {
             if (this.data.disabled)
                 return;
-            this.updateValue(this.newValue, true);
+            this.updateValue(this.data.value, true);
         },
         onClick(event) {
             if (this.data.disabled)

@@ -22,7 +22,6 @@ VantComponent({
         titleWidth: String,
         customStyle: String,
         arrowDirection: String,
-        useLabelSlot: Boolean,
         border: {
             type: Boolean,
             value: true

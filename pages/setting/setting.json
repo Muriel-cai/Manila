@@ -1,9 +1,9 @@
 {
   "usingComponents": {
-    "van-dialog": "../../dist/dialog/index",
-    "van-tab": "../../dist/tab/index",
-    "van-tabs": "../../dist/tabs/index",
-    "van-icon": "../../dist/icon/index",
-    "van-popup": "../../dist/popup/index"
+    "van-dialog": "../../../dist/dialog/index",
+    "van-tab": "../../../dist/tab/index",
+    "van-tabs": "../../../dist/tabs/index",
+    "van-icon": "../../../dist/icon/index",
+    "van-popup": "../../../dist/popup/index"
   }
 }

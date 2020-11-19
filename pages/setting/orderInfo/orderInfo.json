@@ -1,7 +1,7 @@
 {
   "usingComponents": {
-    "van-dialog": "../../dist/dialog/index",
-    "van-field": "../../dist/field/index",
-    "van-button": "../../dist/button/index"
+    "van-dialog": "../../../dist/dialog/index",
+    "van-field": "../../../dist/field/index",
+    "van-button": "../../../dist/button/index"
   }
 }

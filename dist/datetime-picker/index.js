@@ -1,6 +1,5 @@
 import { VantComponent } from '../common/component';
 import { isDef } from '../common/utils';
-import { pickerProps } from '../picker/shared';
 const currentYear = new Date().getFullYear();
 function isValidDate(date) {
     return isDef(date) && !isNaN(new Date(date).getTime());
@@ -30,37 +29,60 @@ function getTrueValue(formattedValue) {
 function getMonthEndDay(year, month) {
     return 32 - new Date(year, month - 1, 32).getDate();
 }
-const defaultFormatter = (_, value) => value;
 VantComponent({
-    classes: ['active-class', 'toolbar-class', 'column-class'],
-    props: Object.assign({}, pickerProps, { formatter: {
-            type: Function,
-            value: defaultFormatter
-        }, value: null, type: {
+    props: {
+        value: null,
+        title: String,
+        loading: Boolean,
+        itemHeight: {
+            type: Number,
+            value: 44
+        },
+        visibleItemCount: {
+            type: Number,
+            value: 5
+        },
+        confirmButtonText: {
+            type: String,
+            value: '确认'
+        },
+        cancelButtonText: {
+            type: String,
+            value: '取消'
+        },
+        type: {
             type: String,
             value: 'datetime'
-        }, showToolbar: {
+        },
+        showToolbar: {
             type: Boolean,
             value: true
-        }, minDate: {
+        },
+        minDate: {
             type: Number,
             value: new Date(currentYear - 10, 0, 1).getTime()
-        }, maxDate: {
+        },
+        maxDate: {
             type: Number,
             value: new Date(currentYear + 10, 11, 31).getTime()
-        }, minHour: {
+        },
+        minHour: {
             type: Number,
             value: 0
-        }, maxHour: {
+        },
+        maxHour: {
             type: Number,
             value: 23
-        }, minMinute: {
+        },
+        minMinute: {
             type: Number,
             value: 0
-        }, maxMinute: {
+        },
+        maxMinute: {
             type: Number,
             value: 59
-        } }),
+        }
+    },
     data: {
         innerValue: Date.now(),
         columns: []
@@ -85,19 +107,18 @@ VantComponent({
     methods: {
         getPicker() {
             if (this.picker == null) {
-                const picker = (this.picker = this.selectComponent('.van-datetime-picker'));
+                const picker = this.picker = this.selectComponent('.van-datetime-picker');
                 const { setColumnValues } = picker;
                 picker.setColumnValues = (...args) => setColumnValues.apply(picker, [...args, false]);
             }
             return this.picker;
         },
         updateColumns() {
-            const { formatter = defaultFormatter } = this.data;
             const results = this.getRanges().map(({ type, range }, index) => {
                 const values = times(range[1] - range[0] + 1, index => {
                     let value = range[0] + index;
                     value = type === 'year' ? `${value}` : padZero(value);
-                    return formatter(type, value);
+                    return value;
                 });
                 return { values };
             });
@@ -244,26 +265,20 @@ VantComponent({
         },
         updateColumnValue(value) {
             let values = [];
-            const { type, formatter = defaultFormatter } = this.data;
+            const { data } = this;
             const picker = this.getPicker();
-            if (type === 'time') {
+            if (data.type === 'time') {
                 const pair = value.split(':');
-                values = [
-                    formatter('hour', pair[0]),
-                    formatter('minute', pair[1])
-                ];
+                values = [pair[0], pair[1]];
             }
             else {
                 const date = new Date(value);
-                values = [
-                    formatter('year', `${date.getFullYear()}`),
-                    formatter('month', padZero(date.getMonth() + 1))
-                ];
-                if (type === 'date') {
-                    values.push(formatter('day', padZero(date.getDate())));
+                values = [`${date.getFullYear()}`, padZero(date.getMonth() + 1)];
+                if (data.type === 'date') {
+                    values.push(padZero(date.getDate()));
                 }
-                if (type === 'datetime') {
-                    values.push(formatter('day', padZero(date.getDate())), formatter('hour', padZero(date.getHours())), formatter('minute', padZero(date.getMinutes())));
+                if (data.type === 'datetime') {
+                    values.push(padZero(date.getDate()), padZero(date.getHours()), padZero(date.getMinutes()));
                 }
             }
             return this.set({ innerValue: value })

@@ -1,4 +1,4 @@
-interface NotifyOptions {
+declare type NotifyOptions = {
     text: string;
     color?: string;
     backgroundColor?: string;
@@ -6,7 +6,6 @@ interface NotifyOptions {
     selector?: string;
     context?: any;
     safeAreaInsetTop?: boolean;
-    zIndex?: number;
-}
+};
 export default function Notify(options: NotifyOptions | string): void;
 export {};

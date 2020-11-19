@@ -5,9 +5,6 @@ VantComponent({
         type: 'descendant',
         linked(child) {
             this.children.push(child);
-        },
-        unlinked(child) {
-            this.children = this.children.filter((item) => item !== child);
         }
     },
     props: {

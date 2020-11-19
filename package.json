@@ -9,6 +9,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@vant/weapp": "^1.6.1",
     "vant-weapp": "^0.5.10"
   }
 }

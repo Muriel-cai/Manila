@@ -22,10 +22,6 @@ VantComponent({
         buttonType: {
             type: String,
             value: 'danger'
-        },
-        decimalLength: {
-            type: Number,
-            value: 2
         }
     },
     computed: {
@@ -33,7 +29,7 @@ VantComponent({
             return typeof this.data.price === 'number';
         },
         priceStr() {
-            return (this.data.price / 100).toFixed(this.data.decimalLength);
+            return (this.data.price / 100).toFixed(2);
         },
         tipStr() {
             const { tip } = this.data;
